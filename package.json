@@ -1,8 +1,20 @@
 {
   "name": "condominio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Esta es una aplicacion que le permite ver a los habitantes del condominio margarita de la urbanizacion jardinez de san jaime ver el status financiero de este condominio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp": "^3.9.1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "devDependencies": {
+    "gulp-pug": "^3.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
