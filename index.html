@@ -1,9 +1,139 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="es"></html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/fuentes.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Diseno</title>
 </head>
-<body></body>
+<body><nav class="navbar navbar-default navbar-static-top">
+<div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#"><img src="img/Logo.png" class="imagen"><img src="img/logo-pequeno.png" class="imagen-pequena"></a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Home</a></li>
+<li><a href="#">Noticias</a></li>
+<li><a href="#">Ingresar</a></li>
+<li><a href="#">Registrar</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<header id="myCarousel" class="carousel slide">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+<li data-target="#myCarousel" data-slide-to="3"></li>
+</ol>
+<!-- Wrapper for Slides -->
+<div class="carousel-inner">
+<div class="item active">
+<!-- Set the first background image using inline CSS below. -->
+<div class="fill" style="background-image:url('img/porton.jpg');"></div>
+<div class="carousel-caption">
+  <div class="row" style="text-align: left;">
+    <div class="col-md-6">
+      <div class="row_item row_left">
+        <h2>Bienvenidos a la pagina del Condominio Margarita</h2>
+        <p>
+          Estamos ubicados en la urbanización Jardines de San Jaime, sector San Jaimito, 
+          Zona Industrial de Maturín. Los amplios espacios, areas verdes, parque infantil, canchas deportivas, 
+          churuatas, entre otros, hacen de nuestra urbanización un lugar especial para vivir. 
+          Los espectaculares atardeceres nos acompañan día a día, resaltando el carácter familiar de 
+          nuestro entorno.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row_item row_right">
+        <h2 class="text-center uppercase">Dime tu opinion</h2>
+        <form action="enviar.php" method="post">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Nombre, Apellido" required name="nombre" id="nombre">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" type="email" placeholder="Tu Email" required name="email" id="email">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" type="phone" placeholder="Tu Teléfono" required name="telefono" id="telefono">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <select class="form-control" name="casa" id="casa">
+                <option value="A">Casa</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea class="form-control b" cols="30" rows="5" placeholder="Opinion . . ." required name="mensaje" id="mensaje"></textarea>
+            </div>
+          </div><button type="submit" class="btn">Enviar ahora</button>
+        </form>
+      </div>
+    </div>
+  </div></div>
+</div>
+<div class="item">
+<!-- Set the second background image using inline CSS below. -->
+<div class="fill" style="background-image:url('img/garita.jpg');"></div>
+<div class="carousel-caption">
+<h2>Caption 2</h2>
+</div>
+</div>
+<div class="item">
+<!-- Set the third background image using inline CSS below. -->
+<div class="fill" style="background-image:url('img/garita-porton.jpg');"></div>
+<div class="carousel-caption">
+<h2>Caption 3</h2>
+</div>
+</div>
+<div class="item">
+<!-- Set the third background image using inline CSS below. -->
+<div class="fill" style="background-image:url('img/calle.jpg');"></div>
+<div class="carousel-caption">
+<h2>Caption 4</h2>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<span class="icon-prev"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<span class="icon-next"></span>
+</a>
+</header>
+  <footer>
+    <p>&copy; Diseño y Desarrollo por <a href="http://jesusrojas.com.ve" target="blank">Jesús Rojas</a></p>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!--script(src="js/carousel.js")-->
+</body>
