@@ -1,4 +1,5 @@
 body
+body
   .navbar
     background: #3a385b
     .navbar-brand
@@ -15,11 +16,9 @@ body
   .contenedor
     text-align: center
     margin-bottom: 2em
-    padding-bottom: 1.2em
-    border-bottom: 1px solid #eee
+    padding-bottom: 1.8em
     .menu
       li
-        display: inline
         a
           padding: 2em 1em
           color: #a4a3ad
@@ -30,4 +29,46 @@ body
           color: #888888
         a.active
           color: #ec7e9a
-          border-bottom: #ec7e9a solid 1px
+  .table
+    border: #e5e6f9 solid 2px
+    border-radius: 7px 7px 7px 7px
+    border-collapse: inherit
+    thead
+      background: #e5e6f9
+      color: #68686e
+      th
+        background: #e5e6f9
+        padding: 1.5em 2em
+      th:first-child
+        border-radius: 7px 0 0 0
+      th:last-child
+        border-radius: 0 7px 0 0
+    tbody
+      td
+        padding: 1.2em 2em
+@media screen and (min-width: 768px)
+  .contenedor
+    border-bottom: 1px solid #eee
+  .menu
+    display: inline
+    padding: 0 15px
+    li
+      display: inline
+      a.active
+        border-bottom: #ec7e9a solid 1px
+@media screen and (max-width: 768px)
+  .alert
+    margin-top: 5em
+  .contenedor
+    margin-bottom: 5em
+    border-bottom: none
+  .menu
+    width: 50%
+    float: left
+    text-align: center
+    padding: 0 15px
+    li
+      display: inline-block
+      margin: .8em
+      a.active
+        border-bottom: white solid 1px
