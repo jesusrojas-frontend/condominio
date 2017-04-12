@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo-pequeno.png">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/fuentes.css">
   <link rel="stylesheet" href="css/estilos.css">
-  <title>Diseno</title>
+  <title>Condominio Margarita</title>
 </head>
 <body><nav class="navbar navbar-default navbar-static-top">
 <div class="container-fluid">
@@ -25,10 +26,10 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul class="nav navbar-nav navbar-right">
-<li><a href="#">Home</a></li>
+<li><a href="/">Home</a></li>
 <li><a href="#">Noticias</a></li>
-<li><a href="#">Ingresar</a></li>
-<li><a href="#">Registrar</a></li>
+<li><a href="#">Proyectos</a></li>
+<li><a href="#" type="button" data-toggle="modal" data-target="#myModal">Ingresar</a></li>
 </ul>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
@@ -131,9 +132,38 @@
 </a>
 </header>
   <footer>
-    <p>&copy; Diseño y Desarrollo por <a href="http://jesusrojas.com.ve" target="blank">Jesús Rojas</a></p>
-  </footer>
+    <p>&copy; Diseño y Desarrollo por <a href="http://jesusrojas.com.ve" target="blank">Jesús Rojas</a><!-- Modal --></p>
+  </footer><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h2>Ingresar</h2></div>
+<div class="modal-body">
+  <form name="sentMessage" id="contactForm" ng-submit="sesion(usuario)">
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label>Correo Electronico</label>
+        <input class="form-control" type="email" placeholder="Email" ng-model="usuario.email" required>
+      </div>
+    </div>
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label>Contraseña</label>
+        <input class="form-control" type="password" placeholder="Contraseña" ng-model="usuario.password" required>
+      </div>
+    </div><br>
+    <div id="success"></div>
+    <div class="row">
+      <div class="form-group col-xs-12"><a class="btn btn-success btn-lg" href="inicio.html">Ingresar</a></div>
+    </div>
+  </form></div>
+</div>
+</div>
+</div>
   <script src="js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
-  <!--script(src="js/carousel.js")-->
+  <script src="js/carousel.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/firebase-config.js"></script>
 </body>

@@ -125,6 +125,32 @@ footer p {
   font-size: 1.8rem;
   padding: 2em 0 1em 0; }
 
+/*  ------ Modal ------*/
+.modal-content {
+  background-color: #f6f7fc; }
+
+.modal-dialog {
+  width: 100%;
+  margin: 0;
+  margin-top: 2%; }
+  .modal-dialog .close {
+    font-size: 50px; }
+  .modal-dialog .modal-body {
+    padding-bottom: 10%; }
+  .modal-dialog form {
+    width: 25%;
+    margin: 5em auto; }
+    .modal-dialog form .form-control {
+      border: none;
+      border-bottom: solid 2px #cccdd1;
+      font-family: 'Montserrat', sans-serif; }
+    .modal-dialog form .form-control:focus {
+      box-shadow: none; }
+    .modal-dialog form .btn {
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      box-shadow: -2px 3px 2px #cccdd1; }
+
 @media screen and (max-width: 768px) {
   .row_right {
     margin-top: 1em; }
