@@ -2,6 +2,7 @@
   text-transform: uppercase; }
 
 body {
+  overflow-x: hidden;
   /*-----------------------------
     -------- Navbar ---------*/ }
   body .navbar {
