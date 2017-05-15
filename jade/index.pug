@@ -1,9 +1,44 @@
 doctype html
-html(lang="en")
+html(lang="es")
 head
   meta(charset="UTF-8")
+<<<<<<< HEAD
   meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
+=======
+  meta(name="viewport", content="width=device-width, initial-scale=1.0 maximum-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="shortcut icon",type="image/x-icon",href="img/logo-pequeno.png")
+  link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+  link(rel="stylesheet", href="font-awesome/css/font-awesome.min.css")
+  link(rel="stylesheet", href="fonts/fuentes.css")
+  link(rel="stylesheet", href="css/estilos.css")
+>>>>>>> desarrollo
   title Condominio Margarita
 body
-  
+  div(ng-app="CondominioMargarita")
+    <div ng-include="'vistas/nav.html'"></div>
+    <div>
+      <div ng-view></div>
+    </div>
+    div(ng-include="'vistas/footer.html'")
+    div(ng-include="'vistas/registro.html'")
+  script(src="js/angular/angular.min.js")
+  script(src="js/jquery.min.js")
+  script(src="bootstrap/js/bootstrap.min.js")
+  script(src="js/carousel.js")
+  //- script(src="js/mycarousel.js")
+  <script src="js/angular/angular-animate.min.js"></script>
+  <script src="js/angular/angular-resource.min.js"></script>
+  <script src="js/angular/angular-route.min.js"></script>
+  script(src="js/firebase.js")
+  <script src="js/angular/angularfire.min.js"></script>
+  script(src="js/firebase-config.js")
+  script(src="js/firebase/app.js")
+  script(src="js/firebase/servicios/auten-servicio.js")
+  script(src="js/firebase/controladores/auten-ctrl.js")
+  script(src="js/firebase/controladores/nav-ctrl.js")
+  script(src="js/firebase/controladores/main-ctrl.js")
+  script(src="js/firebase/controladores/inicio-ctrl.js")
+  script(src="js/firebase/controladores/publicar-ctrl.js")
+  script(src="js/firebase/controladores/noticias-ctrl.js")

@@ -1,0 +1,35 @@
+
+head
+  link(rel="stylesheet", href="css/estilos-noticias.css")
+  title {{noticiaElegida.contenido.titulo}}
+.noticia-item
+  .container
+    .contenedor
+      h1.text-center {{noticiaElegida.titulo}}
+      h3.text-center - {{noticiaElegida.fecha | date:"dd 'de' MMMM 'del' yyyy"}} -
+    .image
+    .contenedor
+      p.
+         {{noticiaElegida.noticia}}
+    <div class="mensajes" ng-show="sesionIniciada()">
+      <form ng-submit="addMessage()">
+        <input type="text" class="form-control" ng-model="message">
+        <input type="submit" class="btn btn-primary">
+      </form>
+      .media(ng-repeat="message in messages | orderBy:orderBy | filter:searchText")
+        .media-left
+          img.media-object(src="{{message.foto}}", alt="perfil")
+        .media-body
+          h4.media-heading {{message.from}}
+          p {{message.content}}
+      //- <ul class="chatbox list-un">
+      //-
+      //-   <li ng-repeat="message in messages | orderBy:orderBy | filter:searchText">
+      //-     <blockquote>
+      //-       <h4>
+      //-         <img src="{{message.foto}}" class="avatar img-circle" alt="foto">{{ message.from }}</h4>
+      //-         <br><p>{{ message.content }}</p>
+      //-     </blockquote>
+      //-   </li>
+      //- </ul>
+    </div>

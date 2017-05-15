@@ -1,0 +1,62 @@
+body
+  background: #f2f2f2
+  h1
+    font-family: 'Roboto Slab', serif
+    font-weight: bold
+  img
+    width: 100%
+  .row
+    .col-md-6
+      margin-top: 1em
+      .row_item
+        transition: .3s
+      .row_item:hover
+        border-radius: 5px
+        .content
+          background: rgba(0,0,0,0.5)
+        .dentro
+          top: 60%
+        p
+          display: inline
+
+.content
+  background: transparent
+  position: absolute
+  top: 0
+  width: 95%
+  height: 100%
+  transition: .5s
+  .dentro
+    position: relative
+    top: 80%
+    left: 1em
+    transition: .5s
+    h2
+      color: white
+      font-family: 'PT Sans', sans-serif
+      font-weight: bold
+    p
+      display: none
+      color: white
+      transition: 1s
+      font-family: 'Montserrat', sans-serif
+.noticia-item
+  background: #f2f2f2
+  .contenedor
+    padding: 1em 4em
+    p
+      font-family: 'Montserrat', sans-serif
+      text-align: justify
+  h3
+    font-family: 'PT Sans', sans-serif
+    color: #949494
+  .image
+    width: 100%
+    height: 0
+    padding-bottom: 25%
+    background-image: url("http://jesusrojas.com.ve/img/bg.png")
+    background-position: center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
+    -o-background-size: cover

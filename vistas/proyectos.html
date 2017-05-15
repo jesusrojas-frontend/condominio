@@ -1,0 +1,17 @@
+
+<head>
+  <link rel="stylesheet" href="css/estilos-noticias.css"/>
+  <title>Proyectos</title>
+</head>
+<div class="container">
+  <h1>Noticias</h1>
+  <div class="row">
+    <div class="col-md-6 col-sm-6" ng-repeat="noticias in noticias"><a class="row_item" href="/#!/noticias/{{noticias.contenido.titulosin}}"><img alt="" src="img/calle.jpg"/>
+        <div class="content">
+          <div class="dentro">
+            <h2>{{noticias.contenido.titulo}}</h2>
+            <p>{{noticias.contenido.noticia}}</p>
+          </div>
+        </div></a></div>
+  </div>
+</div>

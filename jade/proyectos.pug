@@ -1,0 +1,43 @@
+//- meta(charset="UTF-8")
+  //- meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+  //- meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  //- link(rel="shortcut icon",type="image/x-icon",href="img/logo-pequeno.png")
+  //- link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+  //- link(rel="stylesheet", href="font-awesome/css/font-awesome.min.css")
+  //- link(rel="stylesheet", href="fonts/fuentes.css")
+  //- link(rel="stylesheet", href="css/estilos.css")
+head
+  link(rel="stylesheet", href="css/estilos-noticias.css")
+  title Proyectos
+
+.container
+  h1 Noticias
+  .row
+    .col-md-6.col-sm-6(ng-repeat="noticias in noticias")
+      a(href="/#!/noticias/{{noticias.contenido.titulosin}}").row_item
+        img(alt="", src="img/calle.jpg")
+        .content
+          .dentro
+            h2 {{noticias.contenido.titulo}}
+            p {{noticias.contenido.noticia}}
+    //- .col-md-6.col-sm-6
+    //-   a(href="/#!/noticias/noticia").row_item
+    //-     img(alt="", src="img/calle.jpg")
+    //-     .content
+    //-       .dentro
+    //-         h2 Titulo de la noticia
+    //-         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab magni molestias incidunt cumque laboriosam, eos.
+    //- .col-md-6.col-sm-6
+    //-   a(href="/#!/noticias/noticia").row_item
+    //-     img(alt="", src="img/calle.jpg")
+    //-     .content
+    //-       .dentro
+    //-         h2 Titulo de la noticia
+    //-         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab magni molestias incidunt cumque laboriosam, eos.
+    //- .col-md-6.col-sm-6
+    //-   a(href="/#!/noticias/noticia").row_item
+    //-     img(alt="", src="img/calle.jpg")
+    //-     .content
+    //-       .dentro
+    //-         h2 Titulo de la noticia
+    //-         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab magni molestias incidunt cumque laboriosam, eos.

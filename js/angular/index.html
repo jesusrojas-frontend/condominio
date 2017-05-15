@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+  <title>Aprende Facil</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/font/flaticon.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos-inicio.css">
+  <link rel="stylesheet" href="css/estilos-clases.css">
+  <link rel="stylesheet" href="css/estilos-ingresos.css">
+</head>
+<body>
+  <div ng-app="AprendeFacil">
+    <div ng-include="'vistas/nav.html'"></div>
+    <div>
+      <div ng-view></div>
+    </div>
+    <!--<div ng-include="'vistas/footer.html'"></div>-->
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-resource.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <!-- Firebase -->
+  <script src="js/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="js/angularfire.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDV334H_y48DiSpipcNS62tYniH76xt9HA",
+      authDomain: "aprendefacil-99ad0.firebaseapp.com",
+      databaseURL: "https://aprendefacil-99ad0.firebaseio.com",
+      storageBucket: "aprendefacil-99ad0.appspot.com",
+      messagingSenderId: "802750840486"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/servicios/chat-servicio.js"></script>
+  <script src="js/servicios/auten-servicio.js"></script>
+  <script src="js/controladores/auten-ctrl.js"></script>
+  <script src="js/controladores/nav-ctrl.js"></script>
+  <script src="js/controladores/auten-prof-ctrl.js"></script>
+  <script src="js/controladores/main-ctrl.js"></script>
+  <script src="js/controladores/clases.js"></script>
+  <script src="js/controladores/prueba-ctrl.js"></script>
+
+</body>
+</html>
