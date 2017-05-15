@@ -11,6 +11,8 @@ body
     background: #1b4370
     margin: 0
     border: none
+    .image-circulo
+      width: 30px
     .navbar-brand
       .imagen
         width: 300px
@@ -26,6 +28,8 @@ body
             font-family: 'PT Sans', sans-serif
           a:hover
             color: #a6a5a5
+    .dropdown-menu
+      background: #b9b9b9
   .contenedor
     text-align: center
     margin-bottom: 2em
@@ -59,6 +63,7 @@ body
   height: 0
   padding-bottom: 42.5%
 .carouse-indicators
+  display: none
   .active
     width: 12px
     height: 12px
@@ -75,12 +80,14 @@ body
   background-size: cover
   filter: brightness(80%)
   -o-background-size: cover
+.carousel-control,carousel-indicators
+  display: none
 /* ---------------------------------------------------
   --------- Header ------*/
 .row_left
   background: rgba(255, 255, 255, 0.7)
   padding: 1em 3em
-  h2
+  h1
     font-family: 'Roboto Slab', serif
     font-size: 2.8rem
     color: #515151
@@ -137,6 +144,7 @@ footer
   .modal-body
     padding-bottom: 10%
   //  form
+.registro
   form
     width: 25%
     margin: 5em auto
@@ -150,7 +158,12 @@ footer
       font-family: 'Montserrat', sans-serif
       border: none
       box-shadow: -2px 3px 2px #cccdd1
-
+.registrar
+  background-color: #f6f7fc
+  height: 100%
+  form
+    width: 50%
+    margin: 3em auto
 @media screen and (max-width: 768px)
   .row_right
     margin-top: 1em

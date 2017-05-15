@@ -1,0 +1,28 @@
+
+<head>
+  <link rel="stylesheet" href="css/estilos-noticias.css"/>
+  <title>{{noticiaElegida.contenido.titulo}}</title>
+</head>
+<div class="noticia-item">
+  <div class="container">
+    <div class="contenedor">
+      <h1 class="text-center">{{noticiaElegida.titulo}}</h1>
+      <h3 class="text-center">- {{noticiaElegida.fecha | date:"dd 'de' MMMM 'del' yyyy"}} -</h3>
+    </div>
+    <div class="image"></div>
+    <div class="contenedor">
+      <p>{{noticiaElegida.noticia}}</p>
+    </div><div class="mensajes" ng-show="sesionIniciada()">
+<form ng-submit="addMessage()">
+<input type="text" class="form-control" ng-model="message">
+<input type="submit" class="btn btn-primary">
+</form>
+    <div class="media" ng-repeat="message in messages | orderBy:orderBy | filter:searchText">
+      <div class="media-left"><img class="media-object" src="{{message.foto}}" alt="perfil"/></div>
+      <div class="media-body">
+        <h4 class="media-heading">{{message.from}}</h4>
+        <p>{{message.content}}</p>
+      </div>
+    </div></div>
+  </div>
+</div>

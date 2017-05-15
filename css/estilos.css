@@ -9,6 +9,8 @@ body {
     background: #1b4370;
     margin: 0;
     border: none; }
+    body .navbar .image-circulo {
+      width: 30px; }
     body .navbar .navbar-brand .imagen {
       width: 300px; }
     body .navbar .collapse {
@@ -22,6 +24,8 @@ body {
         font-family: 'PT Sans', sans-serif; }
       body .navbar .collapse ul li a:hover {
         color: #a6a5a5; }
+    body .navbar .dropdown-menu {
+      background: #b9b9b9; }
   body .contenedor {
     text-align: center;
     margin-bottom: 2em;
@@ -59,11 +63,13 @@ body {
   height: 0;
   padding-bottom: 42.5%; }
 
-.carouse-indicators .active {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  background-color: #fff; }
+.carouse-indicators {
+  display: none; }
+  .carouse-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #fff; }
 
 .fill {
   width: 100%;
@@ -75,12 +81,15 @@ body {
           filter: brightness(80%);
   -o-background-size: cover; }
 
+.carousel-control, carousel-indicators {
+  display: none; }
+
 /* ---------------------------------------------------
   --------- Header ------*/
 .row_left {
   background: rgba(255, 255, 255, 0.7);
   padding: 1em 3em; }
-  .row_left h2 {
+  .row_left h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 2.8rem;
     color: #515151;
@@ -138,19 +147,27 @@ footer p {
     font-size: 50px; }
   .modal-dialog .modal-body {
     padding-bottom: 10%; }
-  .modal-dialog form {
-    width: 25%;
-    margin: 5em auto; }
-    .modal-dialog form .form-control {
-      border: none;
-      border-bottom: solid 2px #cccdd1;
-      font-family: 'Montserrat', sans-serif; }
-    .modal-dialog form .form-control:focus {
-      box-shadow: none; }
-    .modal-dialog form .btn {
-      font-family: 'Montserrat', sans-serif;
-      border: none;
-      box-shadow: -2px 3px 2px #cccdd1; }
+
+.registro form {
+  width: 25%;
+  margin: 5em auto; }
+  .registro form .form-control {
+    border: none;
+    border-bottom: solid 2px #cccdd1;
+    font-family: 'Montserrat', sans-serif; }
+  .registro form .form-control:focus {
+    box-shadow: none; }
+  .registro form .btn {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    box-shadow: -2px 3px 2px #cccdd1; }
+
+.registrar {
+  background-color: #f6f7fc;
+  height: 100%; }
+  .registrar form {
+    width: 50%;
+    margin: 3em auto; }
 
 @media screen and (max-width: 768px) {
   .row_right {

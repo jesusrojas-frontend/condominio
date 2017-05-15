@@ -1,54 +1,35 @@
-doctype html5
-html(lang="en")
-head
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-  meta(http-equiv="X-UA-Compatible", content="ie=edge")
-  link(rel="shortcut icon",type="image/x-icon",href="img/logo-pequeno.png")
-  link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
-  link(rel="stylesheet", href="font-awesome/css/font-awesome.min.css")
-  link(rel="stylesheet", href="fonts/fuentes.css")
-  link(rel="stylesheet", href="css/estilos.css")
-  link(rel="stylesheet", href="css/estilos-noticias.css")
-  title Titulo de la noticia
-body.noticia-item
-  <nav class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="img/Logo.png" class="imagen"><img src="img/logo-pequeno.png" class="imagen-pequena"></a>
-      </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/proyectos.html">Noticias</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#" type="button" data-toggle="modal" data-target="#myModal">Ingresar</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+head
+  link(rel="stylesheet", href="css/estilos-noticias.css")
+  title {{noticiaElegida.contenido.titulo}}
+.noticia-item
   .container
     .contenedor
-      h1.text-center Titulo de la noticia
-      h3.text-center - 13 de Abril del 2017 -
-      p.
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus a voluptate praesentium, odio delectus iure accusantium dignissimos nemo iste sunt vel placeat perspiciatis minus eos libero in deserunt inventore exercitationem.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo mollitia reiciendis porro ratione laboriosam, itaque aliquam cum ducimus impedit sapiente, possimus tenetur! Blanditiis eaque, beatae inventore asperiores hic quos similique.
-      p.
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque vitae quo porro sapiente, explicabo quae reprehenderit doloremque doloribus illum adipisci quidem aspernatur error pariatur. Dolorum nobis nemo quaerat, dolores ipsum.
-      p.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus a voluptate praesentium, odio delectus iure accusantium dignissimos nemo iste sunt vel placeat perspiciatis minus eos libero in deserunt inventore exercitationem.
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo mollitia reiciendis porro ratione laboriosam, itaque aliquam cum ducimus impedit sapiente, possimus tenetur! Blanditiis eaque, beatae inventore asperiores hic quos similique.
+      h1.text-center {{noticiaElegida.titulo}}
+      h3.text-center - {{noticiaElegida.fecha | date:"dd 'de' MMMM 'del' yyyy"}} -
     .image
-  footer
-    p &copy; Diseño y Desarrollo por 
-      a(href="http://jesusrojas.com.ve", target="blank") Jesús Rojas
+    .contenedor
+      p.
+         {{noticiaElegida.noticia}}
+    <div class="mensajes" ng-show="sesionIniciada()">
+      <form ng-submit="addMessage()">
+        <input type="text" class="form-control" ng-model="message">
+        <input type="submit" class="btn btn-primary">
+      </form>
+      .media(ng-repeat="message in messages | orderBy:orderBy | filter:searchText")
+        .media-left
+          img.media-object(src="{{message.foto}}", alt="perfil")
+        .media-body
+          h4.media-heading {{message.from}}
+          p {{message.content}}
+      //- <ul class="chatbox list-un">
+      //-
+      //-   <li ng-repeat="message in messages | orderBy:orderBy | filter:searchText">
+      //-     <blockquote>
+      //-       <h4>
+      //-         <img src="{{message.foto}}" class="avatar img-circle" alt="foto">{{ message.from }}</h4>
+      //-         <br><p>{{ message.content }}</p>
+      //-     </blockquote>
+      //-   </li>
+      //- </ul>
+    </div>

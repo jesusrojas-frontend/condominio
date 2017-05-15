@@ -1,0 +1,115 @@
+//- Casa	Nombre	Deuda	Interes	Mes	Total
+.container.presidente
+  h2 Presidente
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="/#!/presidente#cuenta-propietario" aria-expanded="true" aria-controls="cuenta-propietario">
+            Collapsible Cuneta de propietarios
+          </a>
+        </h4>
+      </div>
+      <div id="cuenta-propietario" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body registro registrar">
+          form(name="sentMessage",id="contactForm",ng-submit="cuentaPropietario(cuenta)")
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Casa
+                input(type="text" class="form-control" placeholder="Casa" ng-model="cuenta.casa" required)
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Nombre
+                input(type="text" class="form-control" placeholder="Nombre" ng-model="cuenta.nombre" required)
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Deuda
+                input(type="number" class="form-control" placeholder="Deuda" ng-model="cuenta.deuda" required)
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Interes
+                input(type="number" class="form-control" placeholder="Interes" ng-model="cuenta.interes" required)
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Mes
+                input(type="number" class="form-control" placeholder="Mes" ng-model="cuenta.mes" required)
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Total
+                input(type="number" class="form-control" placeholder="Total" ng-model="cuenta.total = cuenta.mes + cuenta.interes + cuenta.deuda" required)
+            br
+            div(id="success")
+            div(class="row")
+              div(class="form-group col-xs-12")
+                //- a(href="/#!/inicio").btn.btn-success.btn-lg Registrar
+                button(type="submit" class="btn btn-success btn-lg") Registrar
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="/#!/presidente#cuenta-inmueble" aria-expanded="false" aria-controls="cuenta-inmueble">
+            Collapsible Cuenta inmueble
+          </a>
+        </h4>
+      </div>
+      <div id="cuenta-inmueble" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+       div(class="panel-body registro registrar")
+          form(name="sentMessage",id="contactForm",ng-submit="cuentaInmueble(inmuelbes)")
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Foto
+                input(type="text" class="form-control" placeholder="Url de la imagen" ng-model="inmuelbes.url" required)
+            br
+            div(id="success")
+            div(class="row")
+              div(class="form-group col-xs-12")
+                button(type="submit" class="btn btn-success btn-lg") Registrar
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="/#!/presidente#recibo-condominio" aria-expanded="false" aria-controls="recibo-condominio">
+            Collapsible Cuota especial
+          </a>
+        </h4>
+      </div>
+      <div id="recibo-condominio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        div(class="panel-body registro registrar")
+          form(name="sentMessage",id="contactForm",ng-submit="cuotaEspecial(cuota)")
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Foto
+                input(type="text" class="form-control" placeholder="Url de la imagen" ng-model="cuota.url" required)
+            br
+            div(id="success")
+            div(class="row")
+              div(class="form-group col-xs-12")
+                button(type="submit" class="btn btn-success btn-lg") Registrar
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="/#!/presidente#recibos-pendientes" aria-expanded="false" aria-controls="recibos-pendientes">
+            Collapsible Ingrersos del mes
+          </a>
+        </h4>
+      </div>
+      <div id="recibos-pendientes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        div(class="panel-body registro registrar")
+          form(name="sentMessage",id="contactForm",ng-submit="ingrersosMes(ingresos)")
+            div(class="row control-group col-md-6")
+              div(class="form-group col-xs-12 floating-label-form-group controls")
+                label Foto
+                input(type="text" class="form-control" placeholder="Url de la imagen" ng-model="ingresos.url" required)
+            br
+            div(id="success")
+            div(class="row")
+              div(class="form-group col-xs-12")
+                button(type="submit" class="btn btn-success btn-lg") Registrar
+      </div>
+    </div>
+  </div>

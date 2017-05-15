@@ -1,0 +1,37 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h2>Ingresar</h2></div>
+<div class="modal-body registro" ng-controller="AutenCtrl">
+<div class="alert alert-success" role="alert" style="display: {{ver}};">
+  <h3>{{alerta}}</h3>
+</div>
+<div class="alert alert-danger" role="alert" style="display: {{verError}};">
+  <h3>{{error}}</h3>
+</div>
+<form name="sentMessage" id="contactForm" ng-submit="sesion(usuario)">
+  <div class="row control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>Correo Electronico</label>
+      <input class="form-control" type="email" placeholder="Email" ng-model="usuario.email" required="required"/>
+    </div>
+  </div>
+  <div class="row control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>Contraseña</label>
+      <input class="form-control" type="password" placeholder="Contraseña" ng-model="usuario.password" required="required"/>
+    </div>
+  </div><br/>
+  <div id="success"></div>
+  <div class="row">
+    <div class="form-group col-xs-12">
+      <button class="btn btn-success btn-lg" type="submit">Ingresar</button>
+    </div>
+  </div>
+</form></div>
+</div>
+</div>
+</div>

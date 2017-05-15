@@ -1,0 +1,50 @@
+
+<head>
+  <link rel="stylesheet" href="css/estilos-inicio.css"/>
+  <title>Condominio Margarita</title>
+</head>
+<div class="inicio">
+  <div class="contenedor">
+    <ul class="menu" role="tablist" id="myTabs">
+      <li role="presentation"><a href="/#!/inicio/#home" role="tab" data-toggle="tab" id="home-tab">Estados de Cuenta</a></li>
+      <li role="presentation"><a href="/#!/inicio/#inmueble" role="tab" data-toggle="tab" id="inmueble-tab">Estado de Cuenta Inmueble</a></li>
+    </ul>
+    <ul class="menu" role="tablist">
+      <li role="presentation"><a href="/#!/inicio/#ingresosMes" role="tab" data-toggle="tab" id="ingresosMes-tab">Ingresos del mes</a></li>
+      <li role="presentation"><a href="/#!/inicio/#cuotasEspeciales" role="tab" data-toggle="tab" id="cuotasEspeciales-tab">Cuotas especiales</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="tab-content">
+      <div class="table-responsive tab-pane fade in active" role="tabpanel" id="home">
+        <table class="table table-hover">
+          <h2>Estados de Cuenta</h2><thead>
+<tr>
+          <th>Casa</th>
+          <th>Nombre</th>
+          <th>Deuda</th>
+          <th>Interes</th>
+          <th>Mes</th>
+          <th>Total</th></tr>
+</thead>
+<tbody>
+          <tr ng-repeat="cuenta in cuentas | orderBy:'contanido.casa':false">
+            <td>{{cuenta.contenido.casa}}</td>
+            <td>{{cuenta.contenido.nombre}}</td>
+            <td>{{cuenta.contenido.deuda}} Bsf</td>
+            <td>{{cuenta.contenido.interes}} Bsf</td>
+            <td>{{cuenta.contenido.mes}} Bsf</td>
+            <td>{{cuenta.contenido.total}} Bsf</td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div class="table-responsive tab-pane fade" role="tabpanel" id="inmueble">
+        <div><img ng-src="{{inmuelbe.contenido.url}}" alt="inmueble"/></div>
+      </div>
+      <div class="table-responsive tab-pane fade" role="tabpanel" id="ingresosMes"><img ng-src="{{cuotaEspecial.contenido.url}}" alt="Cuota Especial"/></div>
+      <div class="table-responsive tab-pane fade" role="tabpanel" id="cuotasEspeciales"><img ng-src="{{ingrersosMes.contenido.url}}" alt="Ingresos del mes"/></div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/mycarousel.js"></script>
+</div>
